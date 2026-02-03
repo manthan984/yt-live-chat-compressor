@@ -1,0 +1,52 @@
+/* YouTube Live Chat Compressor - Styles 
+  Designed to blend with YouTube Dark/Light mode while remaining distinct.
+*/
+
+.yt-chat-compressor-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Visual Appearance */
+  background: #ff9800;   /* orange */
+  color: #4A4A4A;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  font-weight: 600;
+
+  font-size: 11px;
+  font-family: "Roboto", "Arial", sans-serif;
+  
+  /* Sizing & Shape */
+  height: 18px;
+  min-width: 18px;
+  padding: 0 6px;
+  border-radius: 12px;
+  
+  /* Positioning */
+  margin-left: 8px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  
+  /* Transition for smooth updates */
+  transition: transform 0.1s ease;
+}
+
+.yt-chat-compressor-badge:hover {
+  background-color: #2680eb;
+  transform: scale(1.05);
+}
+
+.yt-chat-compressor-badge:active {
+  transform: scale(0.95);
+}
+/* popup animation */
+@keyframes badgePop {
+  0%   { transform: scale(0.6); opacity: 0; }
+  60%  { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.yt-badge-pop {
+  animation: badgePop 0.18s ease-out;
+}
