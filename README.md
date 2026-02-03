@@ -9,6 +9,7 @@ Instead of deleting spam or filtering users, this extension **groups identical m
 ## ✨ Demo
 
 Before:
+
 hello  
 hello  
 hello  
