@@ -5,7 +5,8 @@
   "description": "Automatically collapses repeated messages in YouTube Live Chat. Groups identical messages and displays a counter badge (x2, x3, ...) to improve chat readability during livestreams without deleting any user messages.",
   "permissions": [],
   "host_permissions": [
-    "https://www.youtube.com/*"
+    "https://www.youtube.com/*",
+    "https://www.youtube.com/live_chat*"
   ],
   "action": {
     "default_title": "YouTube Live Chat Compressor",
@@ -22,7 +23,8 @@
       ],
       "js": ["content/chatObserver.js"],
       "css": ["styles/chatStyles.css"],
-      "run_at": "document_idle"
+      "run_at": "document_idle",
+      "all_frames": true
     }
   ],
   "icons": {
