@@ -1,18 +1,28 @@
 {
   "manifest_version": 3,
   "name": "YouTube Live Chat Compressor",
-  "version": "1.0",
-  "description": "Compresses repeated messages in YouTube Live Chat without deletion.",
+  "version": "1.0.1",
+  "description": "Automatically collapses repeated messages in YouTube Live Chat. Groups identical messages and displays a counter badge (x2, x3, ...) to improve chat readability during livestreams without deleting any user messages.",
+  "permissions": [],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "action": {
+    "default_title": "YouTube Live Chat Compressor",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
   "content_scripts": [
     {
       "matches": [
-        "https://www.youtube.com/*",
-        "https://www.youtube.com/live_chat*"
+        "https://www.youtube.com/*"
       ],
       "js": ["content/chatObserver.js"],
       "css": ["styles/chatStyles.css"],
-      "run_at": "document_idle",
-      "all_frames": true
+      "run_at": "document_idle"
     }
   ],
   "icons": {
